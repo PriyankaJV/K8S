@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-data
+spec:
+  volumeName: mongo-data-pv 
+  storageClassName: manual
+  accessModes: Filesystem
+  accessModes:
+    - ReadWriteOnce 
+  resources:
+    requests:
+      storage: 10M
